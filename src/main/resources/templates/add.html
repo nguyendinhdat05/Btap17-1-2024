@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/products/add" method="post">
+    <input type="text" name="name">
+    <input type="text" name="price">
+    <select th:field="${item.category.id}">Category
+        <option th:each="category:${listCategory}" th:value="${category.id}" th:text="${category.name}"></option>
+    </select>
+    <button>Add</button>
+</form>
+</body>
+</html>
